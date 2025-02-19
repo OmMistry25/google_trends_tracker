@@ -1,0 +1,5 @@
+flask
+pandas
+schedule
+pytrends
+plotly
