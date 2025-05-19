@@ -47,19 +47,19 @@ def get_hourly_top_searches():
                             row["value"]
                         ])
                 else:
-                    print(f"⚠️ No trending searches found for '{base_query}' in the last hour.")
+                    print(f"No trending searches found for '{base_query}' in the last hour.")
 
             else:
-                print(f"⚠️ No data available for '{base_query}'. Trying a different keyword...")
+                print(f"No data available for '{base_query}'. Trying a different keyword...")
 
         except Exception as e:
-            print(f"❌ Error fetching data for '{base_query}': {e}")
+            print(f"Error fetching data for '{base_query}': {e}")
 
     if all_results:
         save_hourly_top_searches(all_results)
-        print(f"✅ Saved {len(all_results)} results to 'google_top_searches_hourly.csv'.")
+        print(f"Saved {len(all_results)} results to 'google_top_searches_hourly.csv'.")
     else:
-        print("⚠️ No results found for any keywords. Consider using more specific queries.")
+        print("No results found for any keywords. Consider using more specific queries.")
 
 # Function to save results to CSV
 def save_hourly_top_searches(results, filename="google_top_searches_hourly.csv"):
